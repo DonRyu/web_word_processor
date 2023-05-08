@@ -1,0 +1,42 @@
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #2196f3;
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+  }
+  
+  .button i {
+    color: white;
+    font-size: 24px;
+  }
+  
+  .button-list {
+    position: absolute;
+    bottom: 70px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button.skyblue {
+    background-color: skyblue;
+    margin: 10px 0;
+  }
+  

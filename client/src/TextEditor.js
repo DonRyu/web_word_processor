@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { saveAs } from "file-saver";
 import * as quillToWord from "quill-to-word";
 import { pdfExporter } from "quill-to-pdf";
+import FloatingButton from "./FloatingButton/FloatingButton"
 
 const SAVE_INTERVAL_MS = 2000;
 const TOOLBAR_OPTIONS = [
@@ -116,6 +117,7 @@ export default function TextEditor() {
       <div className="container" ref={wrapperRef}></div>
       <button onClick={downloadDocument}>Download as DOC</button>
       <button onClick={downloadPdf}>Download as PDF</button>
+      <FloatingButton/>
     </>
   );
 }
