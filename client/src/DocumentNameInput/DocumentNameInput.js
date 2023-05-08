@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./DocumentNameInput.css";
 
-function DocumentNameInput({ initialValue, onSubmit }) {
+function DocumentNameInput({ setDocName }) {
   const [editing, setEditing] = useState(false);
   const inputRef = useRef(null);
 
@@ -10,8 +10,9 @@ function DocumentNameInput({ initialValue, onSubmit }) {
     inputRef.current.select();
   };
 
-  const handleInputBlur = () => {
+  const handleInputBlur = (e) => {
     setEditing(false);
+    setDocName(e.target.value);
   };
 
   return (
@@ -28,7 +29,7 @@ function DocumentNameInput({ initialValue, onSubmit }) {
       >
         <input
           type="text"
-          placeholder="Untitled document"
+          placeholder="Untitled"
           ref={inputRef}
           onBlur={handleInputBlur}
         />

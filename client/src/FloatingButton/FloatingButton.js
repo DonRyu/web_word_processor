@@ -4,7 +4,7 @@ import { saveAs } from "file-saver";
 import * as quillToWord from "quill-to-word";
 import { pdfExporter } from "quill-to-pdf";
 
-function FloatingButton({quill}) {
+function FloatingButton({ quill, docName }) {
   const [showButtons, setShowButtons] = useState(false);
 
   const toggleButtons = () => {
@@ -14,13 +14,13 @@ function FloatingButton({quill}) {
   const downloadDocument = async () => {
     const delta = quill.getContents();
     const blob = await quillToWord.generateWord(delta, { exportAs: "blob" });
-    saveAs(blob, "document.docx");
+    saveAs(blob, docName);
   };
 
   const downloadPdf = async () => {
     const delta = quill.getContents();
     const blob = await pdfExporter.generatePdf(delta);
-    saveAs(blob, "pdf-export.pdf");
+    saveAs(blob, docName);
   };
 
   return (
