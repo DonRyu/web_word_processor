@@ -104,6 +104,10 @@ export default function TextEditor() {
       <DoucumentNameInput setDocName={setDocName} />
       <div className="container" ref={wrapperRef}></div>
       <FloatingButton quill={quill} docName={docName} />
+      <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
     </>
   );
 }
