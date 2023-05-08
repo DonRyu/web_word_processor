@@ -3,9 +3,6 @@ import Quill from "quill";
 import "quill/dist/quill.snow.css";
 import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
-import { saveAs } from "file-saver";
-import * as quillToWord from "quill-to-word";
-import { pdfExporter } from "quill-to-pdf";
 import FloatingButton from "./FloatingButton/FloatingButton"
 
 const SAVE_INTERVAL_MS = 2000;
@@ -100,24 +97,12 @@ export default function TextEditor() {
     setQuill(q);
   }, []);
 
-  const downloadDocument = async () => {
-    const delta = quill.getContents();
-    const blob = await quillToWord.generateWord(delta, { exportAs: "blob" });
-    saveAs(blob, "document.docx");
-  };
-
-  const downloadPdf = async () => {
-    const delta = quill.getContents();
-    const blob = await pdfExporter.generatePdf(delta);
-    saveAs(blob, "pdf-export.pdf");
-  };
+ 
 
   return (
     <>
       <div className="container" ref={wrapperRef}></div>
-      <button onClick={downloadDocument}>Download as DOC</button>
-      <button onClick={downloadPdf}>Download as PDF</button>
-      <FloatingButton/>
+      <FloatingButton quill={quill}/>
     </>
   );
 }
