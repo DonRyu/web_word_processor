@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./FloatingButton.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 function FloatingButton() {
   const [showButtons, setShowButtons] = useState(false);
@@ -12,15 +12,15 @@ function FloatingButton() {
   return (
     <div className="floating-buttons">
       <div className="button" onClick={toggleButtons}>
-        <i className="fa fa-plus"></i>
+      <i className="fa fa-plus"></i>
       </div>
       {showButtons && (
         <div className="button-list">
           <div className="button skyblue">
-            <i className="fa fa-pen"></i>
+          <i class="fa-solid fa-file-pdf"></i>
           </div>
           <div className="button skyblue">
-          <FontAwesomeIcon icon="fa-solid fa-file-pdf" beat />
+         asd
           </div>
         </div>
       )}
