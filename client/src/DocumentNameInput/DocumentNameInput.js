@@ -20,7 +20,7 @@ function DocumentNameInput({ setDocName }) {
       <div style={{marginRight:"5px"}}>
         <i
           class="fa-regular fa-file"
-          style={{ fontSize: "30px", marginLeft: "30px" }}
+          style={{ fontSize: "30px", marginLeft: "10px" }}
         ></i>
       </div>
       <div
