@@ -1,4 +1,4 @@
-To start
+Start
 
 Client side
 1. Go to client
