@@ -1,4 +1,4 @@
-import TextEditor from "./TextEditor"
+import TextEditor from "./TextEditor/TextEditor"
 import {
   BrowserRouter as Router,
   Switch,
