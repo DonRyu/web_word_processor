@@ -3,8 +3,8 @@ import Quill from "quill";
 import "quill/dist/quill.snow.css";
 import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
-import FloatingButton from "./FloatingButton/FloatingButton";
-import DoucumentNameInput from "./DocumentNameInput/DocumentNameInput";
+import FloatingButton from "../FloatingButton/FloatingButton";
+import DoucumentNameInput from "../DocumentNameInput/DocumentNameInput";
 
 const SAVE_INTERVAL_MS = 2000;
 const TOOLBAR_OPTIONS = [
